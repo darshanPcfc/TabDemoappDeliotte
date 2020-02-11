@@ -14,16 +14,16 @@ ProductModelObject file wee need to increse schema version here
 - Product list is fetched and stored in ProductModelObject only once
 - Three external flags added to this model isInWatchList,isInCart and cartCounter
 - isInWatchList helps in identifying the product object added in wish list
-- this will help in managing data of wish list only slocally
-- isInCart helps in identifying object which are addedin cart
-- while adding any cart item Alarmofire makes a network call to add cart post API
+- this will help in managing data of wish list only locally
+- isInCart helps in identifying object which are added in cart
+- while adding any cart item Alarmofire makes a network call to add cart through post API
 - on success if product is added in cart then that object is marked with true flag of isInCart
 - out of stock response recieved from api for an object is not marked true for isInCart
-- While removing any items from first I check for quantity i.e cartCounter value if its greater then 1 
-then quantity is been decremented by 1 else cart item is been removed
-- for adding and deleting items from watch list simply isInWatchList flag is been marked as true or false
-depending upon adding or deleting
-- total amount is calculated with respect to price of an item but one should have more than 1 item in cart.
+- when an item from cart the cart is removed, firstly I check for quantity -> if its greater then 1 
+then decremented by 1 else cart item is been removed
+- for adding and deleting items from wish list simply isInWatchList flag is been marked as true or false
+depending upon action
+- total amount is calculated with respect to price of an item.
 
 
 HelperClasses Group
